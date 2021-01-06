@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/empty_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".7"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/dim_padding_big"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/empty_placeholder_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_empty_placeholder_image_size"
+            android:layout_marginTop="@dimen/dim_placeholder_top_margin"
+            android:layout_marginBottom="@dimen/dim_margin"
+            android:alpha=".5"
+            android:contentDescription="@string/no_items_found"
+            app:srcCompat="@drawable/ic_round_find_in_page"
+            app:tint="?attr/colorControlNormal" />
+
+        <TextView
+            android:id="@+id/empty_placeholder_tile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim_margin_very_small"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="4"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textStyle="bold"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/empty_placeholder_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="4"
+            android:paddingBottom="@dimen/dim_padding_big"
+            tools:text="@tools:sample/lorem/random" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_image" />
+
+</FrameLayout>

@@ -1,0 +1,8 @@
+<resources>
+
+    <!--Toolbars-->
+    <style name="BackToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="navigationIcon">@drawable/ic_round_arrow_back</item>
+    </style>
+
+</resources>

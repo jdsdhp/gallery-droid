@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2020 jesusd0897.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="no_items_found_title">Ups!</string>
+    <string name="no_items_found">No hay elementos para mostrar</string>
+    <string name="share">Compartir</string>
+    <string name="set_as_wallpaper">Establecer como fondo</string>
+    <string name="info">Información</string>
+    <string name="set_wallpaper_ask">¿Desea establecer esta imagen como fondo de pantallas?</string>
+    <string name="set_wallpaper_done">Fondo de pantallas actualizado!!</string>
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="load_picture_error">Ha ocurrido un error al compartir la imagen.</string>
+</resources>

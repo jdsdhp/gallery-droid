@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jesusd0897.gallerydroid.view.layout.SquareMaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="?android:selectableItemBackground"
+    app:cardCornerRadius="@dimen/dim_card_corner_radius"
+    app:cardElevation="@dimen/dim_card_elevation">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_view_downloader"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_default_placeholder" />
+
+    <FrameLayout
+        android:id="@+id/decorator_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <!--com.jesusd0897.pictish.ImageViewDownloader
+        android:id="@+id/image_view_downloader"
+        android:layout_width="@dimen/dim_image_section_size"
+        android:layout_height="match_parent"
+        app:ivd_image_border_radius="@dimen/dim_card_corner_radius" />-->
+
+</com.jesusd0897.gallerydroid.view.layout.SquareMaterialCardView>

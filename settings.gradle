@@ -1,0 +1,3 @@
+include ':gallerydroid'
+include ':app'
+rootProject.name = "gallerydroid"
