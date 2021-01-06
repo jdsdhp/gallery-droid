@@ -32,14 +32,14 @@ Gallery Screen|Picture Screen |Inmersive Screen
 #### Kotlin
 Images in this example have been loaded from [Lorem Picsum](https://picsum.photos).
 
-Usage from Activity or Fragment.  Se añade normalmente el fragment (GalleryFragment) mediante una transición o directamente desde XML.
+Usage from Activity or Fragment. The fragment (GalleryFragment) is usually added through a transition or directly from XML.
 ```kotlin
 supportFragmentManager.beginTransaction()
             .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE) //Optional
             .replace(R.id.container, GalleryFragment.newInstance())
             .commit()
 ```
-Solo falta añadirle elementos a la gallería. Se pude hacer mediante el método onAttachFragment en la Activity o Fragment donde se tiene a GalleryFragment.
+All that remains is to add elements to the gallery. It can be done using the onAttachFragment method in the Activity or Fragment where you have the GalleryFragment.
 ```kotlin
 override fun onAttachFragment(fragment: Fragment) {
         super.onAttachFragment(fragment)
@@ -69,7 +69,7 @@ override fun onAttachFragment(fragment: Fragment) {
     }
 ```
 #### XML
-Añade esto a tu archivo AndroidManifest.xml si estas usando la activity por defecto que provee la biblioteca. En caso de que se esté usando directamente GalleryFragment no sería necesario.
+Add this to your AndroidManifest.xml file if you are using the default activity provided by the library. In case GalleryFragment is being used directly, it would not be necessary.
 ```xml
 <activity
   android:name="com.jesusd0897.gallerydroid.view.activity.PictureDetailActivity"
@@ -81,7 +81,7 @@ Custom Gallery|Custom Landscape Gallery|Custom Transformations
 :-:|:-:|:-:
 ![](art/art-04.jpg) | ![](art/art-05.jpg) | ![](art/art-06.jpg)
 #### Kotlin
-Sobrescribiendo onAttachFragment se le puede añadir algunas personalizaciones a la galería.
+By overwriting onAttachFragment you can add some customizations to the gallery.
 ```kotlin
 override fun onAttachFragment(fragment: Fragment) {
         super.onAttachFragment(fragment)
@@ -113,7 +113,7 @@ override fun onAttachFragment(fragment: Fragment) {
     }
 ```
 ##### Adding click listeners
-Si se quiere escuchar los clicks en los elementos de la gallería se puede añadir un OnPictureItemClickListener al GalleryFragment. En caso de que se haya usado en true la propiedad "autoClickHandler" igualmente se abrirá PictureDetailActivity, para que esto no ocurra deberá ponerse en false. 
+If you want to hear the clicks on the elements of the gallery you can add an OnPictureItemClickListener to the GalleryFragment. If the "autoClickHandler" property has been used to true, PictureDetailActivity will still be opened, so that this does not happen it must be set to false.
 ```kotlin
 fragment.onItemClickListener = object : OnPictureItemClickListener {
                 override fun onClick(picture: Picture, position: Int) {
