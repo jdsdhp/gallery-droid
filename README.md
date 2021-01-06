@@ -3,9 +3,9 @@
 
 A simple and useful Android Gallery.
 
-[![JitPack](https://jitpack.io/v/jdsdhp/gallerydroid.svg)](https://jitpack.io/#jdsdhp/gallerydroid) 
+[![JitPack](https://jitpack.io/v/jdsdhp/gallery-droid.svg)](https://jitpack.io/#jdsdhp/gallery-droid) 
 [![API](https://img.shields.io/badge/API-17%2B-red.svg?style=flat)](https://android-arsenal.com/api?level=17) 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/jdsdhp/gallerydroid/blob/master/LICENSE) 
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/jdsdhp/gallery-droid/blob/master/LICENSE) 
 [![Twitter](https://img.shields.io/badge/Twitter-@jdsdhp-9C27B0.svg)](https://twitter.com/jdsdhp)
 
 ## Including in your project
@@ -20,7 +20,7 @@ allprojects  {
     }
 }
 dependencies {
-    implementation 'com.github.jdsdhp:gallerydroid:$version'
+    implementation 'com.github.jdsdhp:gallery-droid:$version'
 }
 ```
 
@@ -98,7 +98,7 @@ override fun onAttachFragment(fragment: Fragment) {
                 )
                 .pictureCornerRadius(16f)
                 .pictureElevation(8f)
-                .transformer(PageTransformer.FLIP_HORIZONTAL)
+                .transformer(PageTransformer.BACK_TO_FOREGROUND)
                 .spacing(12)
                 .portraitColumns(2)
                 .landscapeColumns(4)
@@ -131,7 +131,7 @@ fragment.onItemClickListener = object : OnPictureItemClickListener {
 
 It's very important to check out the sample app. Most techniques that you would want to implement are already implemented in the examples.
 
-View the sample app's source code [here](https://github.com/jdsdhp/gallerydroid/tree/master/app)
+View the sample app's source code [here](https://github.com/jdsdhp/gallery-droid/tree/master/app)
 
 License
 =======
