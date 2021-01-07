@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2020 jesusd0897.
-  ~
+  ~ Copyright (c) 2021 jesusd0897.
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
   ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
   ~ Unless required by applicable law or agreed to in writing, software
   ~ distributed under the License is distributed on an "AS IS" BASIS,
   ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,7 +16,6 @@
     package="com.jesusd0897.gallerydroid.sample">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--<uses-permission android:name="android.permission.SET_WALLPAPER" />-->
 
     <application
         android:allowBackup="true"
@@ -40,16 +36,6 @@
             android:name="com.jesusd0897.gallerydroid.view.activity.PictureDetailActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/Theme.MaterialComponents.NoActionBar" />
-
-        <!--<provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="gallerydroidroid.sample.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>-->
 
     </application>
 

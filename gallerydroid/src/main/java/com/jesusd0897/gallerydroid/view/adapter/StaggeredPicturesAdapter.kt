@@ -20,7 +20,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.jesusd0897.gallerydroid.R
-import com.jesusd0897.gallerydroid.databinding.ItemImageBinding
+import com.jesusd0897.gallerydroid.databinding.ItemImageStaggeredBinding
 import com.jesusd0897.gallerydroid.model.Picture
 import com.jesusd0897.gallerydroid.view.fragment.OnPictureItemClickListener
 import com.jesusd0897.kutil.extension.gone
@@ -29,7 +29,7 @@ import com.jesusd0897.kutil.extension.visible
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
 
-class PicturesAdapter(
+class StaggeredPicturesAdapter(
     itemClickListener: OnPictureItemClickListener? = null,
     loadingPlaceholder: Drawable? = null,
     errorPlaceholder: Drawable? = null,
@@ -48,7 +48,7 @@ class PicturesAdapter(
 ) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = PictureViewHolder(
-        ItemImageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        ItemImageStaggeredBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -57,7 +57,7 @@ class PicturesAdapter(
 
     override fun getItemCount() = items.size
 
-    inner class PictureViewHolder(private val binding: ItemImageBinding) :
+    inner class PictureViewHolder(private val binding: ItemImageStaggeredBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         private var decoratorLabel: TextView? = null

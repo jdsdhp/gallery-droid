@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 jesusd0897.
+ * Copyright (c) 2021 jesusd0897.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -62,64 +62,6 @@ class PictureDetailActivity : AppCompatActivity() {
         )
         updateTitle()
     }
-
-    /*override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_image_detail, menu)
-        return true
-    }
-
-    @SuppressLint("MissingPermission")
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_share -> {
-                Picasso.get().load(pictures[position].fileURL).into(object : Target {
-                    override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-                        if (bitmap != null) {
-                            val uri = Uri.fromFile(
-                                bitmapToFile(
-                                    context = this@PictureDetailActivity,
-                                    bitmap = bitmap,
-                                )
-                            )
-                            if (uri != null)
-                                sharePicture(this@PictureDetailActivity, uri)
-                            else Toast.makeText(
-                                this@PictureDetailActivity,
-                                R.string.load_picture_error,
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        } else Toast.makeText(
-                            this@PictureDetailActivity,
-                            R.string.load_picture_error,
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-
-                    override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-                        Toast.makeText(
-                            this@PictureDetailActivity,
-                            R.string.load_picture_error,
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-
-                    override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}
-                })
-
-            }
-            R.id.action_wallpaper -> alertDialog(
-                this,
-                R.string.set_as_wallpaper, R.string.set_wallpaper_ask,
-                R.string.accept, R.string.cancel,
-                null, true,
-                { _, _ ->
-                    //setAsWallpaper(this@PictureDetailActivity, pictures[position].fileName)
-                }, null
-            ).show()
-        }
-        return super.onOptionsItemSelected(item)
-
-    }*/
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)

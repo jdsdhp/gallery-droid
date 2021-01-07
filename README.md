@@ -1,7 +1,7 @@
 ☘ GalleryDroid
 =======
 
-A simple and useful Android Gallery.
+A simple and useful Android Gallery based on [Picasso](https://github.com/square/picasso)  and [PhotoView](https://github.com/chrisbanes/PhotoView).
 
 [![JitPack](https://jitpack.io/v/jdsdhp/gallery-droid.svg)](https://jitpack.io/#jdsdhp/gallery-droid) 
 [![API](https://img.shields.io/badge/API-17%2B-red.svg?style=flat)](https://android-arsenal.com/api?level=17) 
@@ -77,7 +77,7 @@ Add this to your AndroidManifest.xml file if you are using the default activity 
   android:theme="@style/Theme.MaterialComponents.NoActionBar" />
 ```
 ## Advanced Usage
-Custom Gallery|Custom Landscape Gallery|Custom Transformations
+Custom Gallery | Custom Layout | Custom Transformation
 :-:|:-:|:-:
 ![](art/art-04.jpg) | ![](art/art-05.jpg) | ![](art/art-06.jpg)
 #### Kotlin
@@ -90,6 +90,7 @@ override fun onAttachFragment(fragment: Fragment) {
                 GalleryDroid(
                     //...your pictures
                 )
+                .layoutManager(GalleryDroid.LAYOUT_STAGGERED_GRID)
                 .loadingPlaceholder(
                     ContextCompat.getDrawable(this, R.drawable.ic_custom_loading_placeholder)
                 )
@@ -98,7 +99,7 @@ override fun onAttachFragment(fragment: Fragment) {
                 )
                 .pictureCornerRadius(16f)
                 .pictureElevation(8f)
-                .transformer(PageTransformer.BACK_TO_FOREGROUND)
+                .transformer(GalleryDroid.TRANSFORMER_CUBE_OUT)
                 .spacing(12)
                 .portraitColumns(2)
                 .landscapeColumns(4)
@@ -155,7 +156,7 @@ View the sample app's source code [here](https://github.com/jdsdhp/gallery-droid
 License
 =======
 
-    Copyright (c) 2020 jesusd0897.
+    Copyright (c) 2021 jesusd0897.
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

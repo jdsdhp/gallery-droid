@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 jesusd0897.
+ * Copyright (c) 2021 jesusd0897.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -17,13 +17,21 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.jesusd0897.gallerydroid.databinding.FragmentPicturePagerBinding
-import com.jesusd0897.gallerydroid.model.PageTransformer
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_BACK_TO_FOREGROUND
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_CUBE_OUT
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_DEPTH
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_FLIP_HORIZONTAL
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_FOREGROUND_TO_BACK
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_ROTATE_DOWN
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_ROTATE_UP
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_TABLET
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_ZOOM_IN
+import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_ZOOM_OUT
 import com.jesusd0897.gallerydroid.model.Picture
 import com.jesusd0897.gallerydroid.transformation.*
 import com.jesusd0897.gallerydroid.util.EXTRA_USE_LABEL_TAG
@@ -101,19 +109,19 @@ class PicturePagerFragment : Fragment() {
 
     private fun provideTransformer() =
         when (transformerId) {
-            PageTransformer.DEPTH -> DepthPageTransformer()
-            PageTransformer.ZOOM_IN -> ZoomInPageTransformer()
-            PageTransformer.ZOOM_OUT -> ZoomOutPageTransformer()
-            //PageTransformer.CUBE_IN -> CubeInPageTransformer()
-            PageTransformer.CUBE_OUT -> CubeOutPageTransformer()
-            PageTransformer.FLIP_HORIZONTAL -> FlipHorizontalPageTransformer()
-            //PageTransformer.FLIP_VERTICAL -> FlipVerticalPageTransformer()
-            PageTransformer.FOREGROUND_TO_BACK -> ForegroundToBackgroundPageTransformer()
-            PageTransformer.BACK_TO_FOREGROUND -> BackgroundToForegroundPageTransformer()
-            //PageTransformer.PARALLAX -> ParallaxPageTransformer()
-            PageTransformer.ROTATE_DOWN -> RotateDownPageTransformer()
-            PageTransformer.ROTATE_UP -> RotateUpPageTransformer()
-            PageTransformer.TABLET -> TabletPageTransformer()
+            TRANSFORMER_DEPTH -> DepthPageTransformer()
+            TRANSFORMER_ZOOM_IN -> ZoomInPageTransformer()
+            TRANSFORMER_ZOOM_OUT -> ZoomOutPageTransformer()
+            //CUBE_IN -> CubeInPageTransformer()
+            TRANSFORMER_CUBE_OUT -> CubeOutPageTransformer()
+            TRANSFORMER_FLIP_HORIZONTAL -> FlipHorizontalPageTransformer()
+            //FLIP_VERTICAL -> FlipVerticalPageTransformer()
+            TRANSFORMER_FOREGROUND_TO_BACK -> ForegroundToBackgroundPageTransformer()
+            TRANSFORMER_BACK_TO_FOREGROUND -> BackgroundToForegroundPageTransformer()
+            //PARALLAX -> ParallaxPageTransformer()
+            TRANSFORMER_ROTATE_DOWN -> RotateDownPageTransformer()
+            TRANSFORMER_ROTATE_UP -> RotateUpPageTransformer()
+            TRANSFORMER_TABLET -> TabletPageTransformer()
             else -> null
         }
 
