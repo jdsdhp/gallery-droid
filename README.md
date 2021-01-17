@@ -15,12 +15,12 @@ A simple and useful Android Gallery based on [Picasso](https://github.com/square
 ```gradle
 allprojects  {
     repositories {
-        ...
         maven { url 'https://jitpack.io' }
     }
 }
 dependencies {
-    implementation 'com.github.jdsdhp:gallery-droid:$version'
+    implementation "com.github.jdsdhp:kutil:0.1.9"
+    implementation 'com.github.jdsdhp:gallery-droid:0.1.4'
 }
 ```
 

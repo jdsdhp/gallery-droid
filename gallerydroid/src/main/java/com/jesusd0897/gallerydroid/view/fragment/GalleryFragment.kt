@@ -31,15 +31,15 @@ import com.jesusd0897.gallerydroid.view.adapter.PicturesBaseAdapter
 import com.jesusd0897.gallerydroid.view.adapter.StaggeredPicturesAdapter
 import com.jesusd0897.gallerydroid.view.decoration.GalleryRecyclerDecoration
 import com.jesusd0897.gallerydroid.view.viewmodel.GalleryViewModel
-import com.jesusd0897.kutil.log
 import com.jesusd0897.kutil.model.StatusResource
+import com.jesusd0897.kutil.ui.KRecyclerFragment
 
 interface OnPictureItemClickListener {
     fun onClick(picture: Picture, position: Int)
     fun onLongClick(picture: Picture, position: Int) = Unit
 }
 
-class GalleryFragment : RecyclerFragment() {
+class GalleryFragment : KRecyclerFragment() {
 
     companion object {
         fun newInstance() = GalleryFragment()
@@ -88,7 +88,6 @@ class GalleryFragment : RecyclerFragment() {
                 onItemClickListener?.onLongClick(picture, position)
             }
         }
-        log("GalleryFragment", "${galleryDroid?.layoutManager}")
         adapter =
             if (galleryDroid?.layoutManager == GalleryDroid.LAYOUT_STAGGERED_GRID)
                 StaggeredPicturesAdapter(clickListener)

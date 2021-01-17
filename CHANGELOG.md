@@ -1,5 +1,10 @@
 Change Log
 ==========
+Version 0.1.4 *(2021-01-16)*
+----------------------------
+Dependencies updated.
+Using KRecyclerFragment from KUtil library. 
+
 Version 0.1.3 *(2021-01-16)*
 ----------------------------
 Layout renamed to avoid view binding conflict.
