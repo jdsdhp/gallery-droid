@@ -80,7 +80,7 @@ class GalleryDroid(var items: List<Picture> = listOf()) {
     var layoutManager: Int? = LAYOUT_GRID
 
     @LayoutRes
-    var decoratorLayout: Int? = R.layout.default_decorator
+    var decoratorLayout: Int? = R.layout.gallery_droid_default_decorator
 
     fun tag(tag: String): GalleryDroid {
         this.tag = tag

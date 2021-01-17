@@ -18,7 +18,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.jesusd0897.gallerydroid.databinding.FragmentPictureBinding
+import com.jesusd0897.gallerydroid.databinding.GalleryDroidFragmentPictureBinding
 import com.jesusd0897.gallerydroid.model.Picture
 import com.jesusd0897.gallerydroid.view.activity.PictureDetailActivity
 import com.jesusd0897.kutil.EXTRA_ITEM_TAG
@@ -27,7 +27,7 @@ import com.squareup.picasso.Picasso
 
 class PictureDetailFragment : Fragment() {
 
-    private var _binding: FragmentPictureBinding? = null
+    private var _binding: GalleryDroidFragmentPictureBinding? = null
     private val binding get() = _binding
 
     companion object {
@@ -53,7 +53,7 @@ class PictureDetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPictureBinding.inflate(inflater, container, false)
+        _binding = GalleryDroidFragmentPictureBinding.inflate(inflater, container, false)
         binding?.photoView?.let {
             it.setOnClickListener { (activity as PictureDetailActivity).handleDecorVisibility() }
             Picasso.get()

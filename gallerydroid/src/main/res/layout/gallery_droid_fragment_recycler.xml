@@ -69,6 +69,6 @@
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
         tools:itemCount="10"
-        tools:listitem="@layout/item_image" />
+        tools:listitem="@layout/gallery_droid_item_image" />
 
 </FrameLayout>

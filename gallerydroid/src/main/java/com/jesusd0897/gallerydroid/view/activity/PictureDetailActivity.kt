@@ -19,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.jesusd0897.gallerydroid.R
-import com.jesusd0897.gallerydroid.databinding.ActivityPictureDetailBinding
+import com.jesusd0897.gallerydroid.databinding.GalleryDroidActivityPictureDetailBinding
 import com.jesusd0897.gallerydroid.model.Picture
 import com.jesusd0897.gallerydroid.util.EXTRA_USE_LABEL_TAG
 import com.jesusd0897.gallerydroid.view.fragment.PicturePagerFragment
@@ -33,7 +33,7 @@ import java.util.*
 
 class PictureDetailActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityPictureDetailBinding
+    private lateinit var binding: GalleryDroidActivityPictureDetailBinding
 
     private var pictures = ArrayList<Picture>()
     private var position = 0
@@ -43,7 +43,7 @@ class PictureDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPictureDetailBinding.inflate(layoutInflater)
+        binding = GalleryDroidActivityPictureDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
         binding.toolbar.setNavigationOnClickListener { onBackPressed() }

@@ -21,7 +21,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import com.jesusd0897.gallerydroid.R
-import com.jesusd0897.gallerydroid.databinding.FragmentRecyclerBinding
+import com.jesusd0897.gallerydroid.databinding.GalleryDroidFragmentRecyclerBinding
 import com.jesusd0897.kutil.extension.gone
 import com.jesusd0897.kutil.extension.visible
 
@@ -33,7 +33,7 @@ abstract class BasicFragment : Fragment() {
 
 abstract class RecyclerFragment : BasicFragment() {
 
-    private var _binding: FragmentRecyclerBinding? = null
+    private var _binding: GalleryDroidFragmentRecyclerBinding? = null
     protected val binding get() = _binding
 
     protected open var emptyTitle: String? = null
@@ -45,7 +45,7 @@ abstract class RecyclerFragment : BasicFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentRecyclerBinding.inflate(inflater, container, false)
+        _binding = GalleryDroidFragmentRecyclerBinding.inflate(inflater, container, false)
         emptyTitle = getString(R.string.no_items_found_title)
         emptySubtitle = getString(R.string.no_items_found)
 

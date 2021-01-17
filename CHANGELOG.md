@@ -1,5 +1,9 @@
 Change Log
 ==========
+Version 0.1.3 *(2021-01-16)*
+----------------------------
+Layout renamed to avoid view binding conflict.
+
 Version 0.1.2 *(2021-01-07)*
 ----------------------------
 Layout managers added.

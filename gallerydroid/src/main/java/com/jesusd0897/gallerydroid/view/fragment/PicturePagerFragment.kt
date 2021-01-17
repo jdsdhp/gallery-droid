@@ -21,7 +21,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-import com.jesusd0897.gallerydroid.databinding.FragmentPicturePagerBinding
+import com.jesusd0897.gallerydroid.databinding.GalleryDroidFragmentPicturePagerBinding
 import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_BACK_TO_FOREGROUND
 import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_CUBE_OUT
 import com.jesusd0897.gallerydroid.model.GalleryDroid.Companion.TRANSFORMER_DEPTH
@@ -41,7 +41,7 @@ import com.jesusd0897.kutil.EXTRA_POSITION_TAG
 
 class PicturePagerFragment : Fragment() {
 
-    private var _binding: FragmentPicturePagerBinding? = null
+    private var _binding: GalleryDroidFragmentPicturePagerBinding? = null
     private val binding get() = _binding
 
     companion object {
@@ -78,7 +78,7 @@ class PicturePagerFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPicturePagerBinding.inflate(inflater, container, false)
+        _binding = GalleryDroidFragmentPicturePagerBinding.inflate(inflater, container, false)
         val sectionsPagerAdapter = SectionsPagerAdapter(parentFragmentManager)
         binding?.picturePageContainer?.setPageTransformer(true, provideTransformer())
         binding?.picturePageContainer?.adapter = sectionsPagerAdapter
